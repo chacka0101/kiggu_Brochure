@@ -935,6 +935,33 @@
     text-transform: uppercase;
   }
 
+  /* Clients showcase image */
+  .clients-showcase {
+    margin: 0 auto;
+    max-width: 1280px;
+    border-radius: 28px;
+    overflow: hidden;
+    background: white;
+    border: 1px solid rgba(15, 23, 42, 0.05);
+    box-shadow:
+      0 1px 0 rgba(255,255,255,1) inset,
+      0 8px 16px -4px rgba(15, 23, 42, 0.04),
+      0 24px 48px -12px rgba(15, 23, 42, 0.08);
+    transition: transform 0.5s cubic-bezier(0.16,1,0.3,1), box-shadow 0.5s;
+  }
+  .clients-showcase:hover {
+    transform: translateY(-4px);
+    box-shadow:
+      0 1px 0 rgba(255,255,255,1) inset,
+      0 12px 24px -6px rgba(15, 23, 42, 0.06),
+      0 40px 80px -20px rgba(79, 96, 255, 0.18);
+  }
+  .clients-showcase img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
   /* Sectors grid */
   .sectors-grid {
     display: grid;
@@ -2383,87 +2410,8 @@
       </div>
     </div>
 
-    <div class="sectors-grid">
-
-      <!-- SALUD -->
-      <article class="sector-card reveal" data-sector="salud">
-        <div class="sector-icon">Salud</div>
-        <div class="sector-clients">
-          <div class="client-logo"><img src="logos/clientes/imedical.png" alt="iMedical" onerror="this.style.display='none'"><span class="client-fallback">iMedical</span></div>
-          <div class="client-logo"><img src="logos/clientes/icare.png" alt="iCare Intelligence" onerror="this.style.display='none'"><span class="client-fallback">iCare</span></div>
-          <div class="client-logo full-row"><img src="logos/clientes/cardioinfantil.png" alt="Fundación Cardioinfantil" onerror="this.style.display='none'"><span class="client-fallback">Fundación Cardioinfantil</span></div>
-          <div class="client-logo"><img src="logos/clientes/colmedica.png" alt="Colmédica" onerror="this.style.display='none'"><span class="client-fallback">Colmédica</span></div>
-          <div class="client-logo"><img src="logos/clientes/jomedical.png" alt="Jomedical" onerror="this.style.display='none'"><span class="client-fallback">Jomedical</span></div>
-          <div class="client-logo full-row"><img src="logos/clientes/pablo-tobon.png" alt="Hospital Pablo Tobón Uribe" onerror="this.style.display='none'"><span class="client-fallback">Hospital Pablo Tobón Uribe</span></div>
-        </div>
-      </article>
-
-      <!-- CONSUMO Y SERVICIOS -->
-      <article class="sector-card reveal" data-sector="consumo">
-        <div class="sector-icon">Consumo y Servicios</div>
-        <div class="sector-clients">
-          <div class="client-logo"><img src="logos/clientes/pacific.png" alt="Pacific" onerror="this.style.display='none'"><span class="client-fallback">Pacific</span></div>
-          <div class="client-logo"><img src="logos/clientes/cenit.png" alt="Cenit" onerror="this.style.display='none'"><span class="client-fallback">Cenit</span></div>
-          <div class="client-logo"><img src="logos/clientes/servientrega.png" alt="Servientrega" onerror="this.style.display='none'"><span class="client-fallback">Servientrega</span></div>
-          <div class="client-logo"><img src="logos/clientes/ecopetrol.png" alt="Ecopetrol" onerror="this.style.display='none'"><span class="client-fallback">Ecopetrol</span></div>
-          <div class="client-logo"><img src="logos/clientes/avianca.png" alt="Avianca" onerror="this.style.display='none'"><span class="client-fallback">Avianca</span></div>
-          <div class="client-logo"><img src="logos/clientes/coordinadora.png" alt="Coordinadora" onerror="this.style.display='none'"><span class="client-fallback">Coordinadora</span></div>
-          <div class="client-logo"><img src="logos/clientes/bt.png" alt="BT" onerror="this.style.display='none'"><span class="client-fallback">BT</span></div>
-          <div class="client-logo"><img src="logos/clientes/astro.png" alt="Astro" onerror="this.style.display='none'"><span class="client-fallback">Astro</span></div>
-          <div class="client-logo"><img src="logos/clientes/pagatodo.png" alt="Paga Todo Para Todo" onerror="this.style.display='none'"><span class="client-fallback">Paga Todo</span></div>
-          <div class="client-logo"><img src="logos/clientes/etb.png" alt="ETB" onerror="this.style.display='none'"><span class="client-fallback">ETB</span></div>
-          <div class="client-logo"><img src="logos/clientes/equion.png" alt="Equion" onerror="this.style.display='none'"><span class="client-fallback">Equion</span></div>
-          <div class="client-logo"><img src="logos/clientes/liberty.png" alt="Liberty Mutual" onerror="this.style.display='none'"><span class="client-fallback">Liberty Mutual</span></div>
-        </div>
-      </article>
-
-      <!-- SERVICIOS FINANCIEROS -->
-      <article class="sector-card reveal" data-sector="financieros">
-        <div class="sector-icon">Servicios Financieros</div>
-        <div class="sector-clients">
-          <div class="client-logo"><img src="logos/clientes/finaktiva.png" alt="Finaktiva" onerror="this.style.display='none'"><span class="client-fallback">Finaktiva</span></div>
-          <div class="client-logo"><img src="logos/clientes/betplay.png" alt="BetPlay" onerror="this.style.display='none'"><span class="client-fallback">BetPlay</span></div>
-          <div class="client-logo full-row"><img src="logos/clientes/corredor-empresarial.png" alt="Corredor Empresarial" onerror="this.style.display='none'"><span class="client-fallback">Corredor Empresarial</span></div>
-          <div class="client-logo"><img src="logos/clientes/loteria-bogota.png" alt="Lotería de Bogotá" onerror="this.style.display='none'"><span class="client-fallback">Lotería Bogotá</span></div>
-          <div class="client-logo"><img src="logos/clientes/ach.png" alt="ACH" onerror="this.style.display='none'"><span class="client-fallback">ACH</span></div>
-          <div class="client-logo"><img src="logos/clientes/falabella.png" alt="Banco Falabella" onerror="this.style.display='none'"><span class="client-fallback">Banco Falabella</span></div>
-          <div class="client-logo"><img src="logos/clientes/contactar.png" alt="Banco Contactar" onerror="this.style.display='none'"><span class="client-fallback">Banco Contactar</span></div>
-          <div class="client-logo"><img src="logos/clientes/fna.png" alt="FNA" onerror="this.style.display='none'"><span class="client-fallback">FNA</span></div>
-          <div class="client-logo"><img src="logos/clientes/correcol.png" alt="Correcol" onerror="this.style.display='none'"><span class="client-fallback">Correcol</span></div>
-          <div class="client-logo"><img src="logos/clientes/bbva.png" alt="BBVA" onerror="this.style.display='none'"><span class="client-fallback">BBVA</span></div>
-          <div class="client-logo"><img src="logos/clientes/supra.png" alt="Supra" onerror="this.style.display='none'"><span class="client-fallback">Supra</span></div>
-          <div class="client-logo"><img src="logos/clientes/bmc.png" alt="BMC" onerror="this.style.display='none'"><span class="client-fallback">BMC</span></div>
-        </div>
-      </article>
-
-      <!-- GOBIERNO -->
-      <article class="sector-card reveal" data-sector="gobierno">
-        <div class="sector-icon">Gobierno</div>
-        <div class="sector-clients">
-          <div class="client-logo full-row"><img src="logos/clientes/fac.png" alt="Fuerza Aeroespacial Colombiana" onerror="this.style.display='none'"><span class="client-fallback">Fuerza Aeroespacial Colombiana</span></div>
-          <div class="client-logo"><img src="logos/clientes/ejercito.png" alt="Ejército Nacional" onerror="this.style.display='none'"><span class="client-fallback">Ejército Nacional</span></div>
-          <div class="client-logo"><img src="logos/clientes/defensa.png" alt="Mindefensa" onerror="this.style.display='none'"><span class="client-fallback">Mindefensa</span></div>
-          <div class="client-logo full-row"><img src="logos/clientes/fiscalia.png" alt="Fiscalía General de la Nación" onerror="this.style.display='none'"><span class="client-fallback">Fiscalía General</span></div>
-          <div class="client-logo"><img src="logos/clientes/coljuegos.png" alt="Coljuegos" onerror="this.style.display='none'"><span class="client-fallback">Coljuegos</span></div>
-          <div class="client-logo"><img src="logos/clientes/aerocivil.png" alt="Aeronáutica Civil" onerror="this.style.display='none'"><span class="client-fallback">Aerocivil</span></div>
-          <div class="client-logo full-row"><img src="logos/clientes/idu.png" alt="IDU" onerror="this.style.display='none'"><span class="client-fallback">IDU</span></div>
-        </div>
-      </article>
-
-      <!-- RETAIL -->
-      <article class="sector-card reveal" data-sector="retail">
-        <div class="sector-icon">Retail</div>
-        <div class="sector-clients">
-          <div class="client-logo"><img src="logos/clientes/adidas.png" alt="Adidas" onerror="this.style.display='none'"><span class="client-fallback">Adidas</span></div>
-          <div class="client-logo"><img src="logos/clientes/claro.png" alt="Claro" onerror="this.style.display='none'"><span class="client-fallback">Claro</span></div>
-          <div class="client-logo full-row"><img src="logos/clientes/alkosto.png" alt="Alkosto HiperAhorro" onerror="this.style.display='none'"><span class="client-fallback">Alkosto HiperAhorro</span></div>
-          <div class="client-logo"><img src="logos/clientes/farmatodo.png" alt="Farmatodo" onerror="this.style.display='none'"><span class="client-fallback">Farmatodo</span></div>
-          <div class="client-logo"><img src="logos/clientes/totto.png" alt="Totto" onerror="this.style.display='none'"><span class="client-fallback">Totto</span></div>
-          <div class="client-logo"><img src="logos/clientes/pepeganga.png" alt="PepeGanga" onerror="this.style.display='none'"><span class="client-fallback">PepeGanga</span></div>
-          <div class="client-logo"><img src="logos/clientes/rappi.png" alt="Rappi" onerror="this.style.display='none'"><span class="client-fallback">Rappi</span></div>
-        </div>
-      </article>
-
+    <div class="clients-showcase reveal">
+      <img src="clientes-kiggu.png" alt="Clientes de Kiggu: Salud, Consumo y Servicios, Servicios Financieros, Gobierno y Retail" />
     </div>
 
     <div class="about-extra reveal">
