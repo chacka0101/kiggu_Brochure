@@ -939,7 +939,7 @@
   .sectors-grid {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    gap: 16px;
+    gap: 18px;
   }
   @media (max-width: 1100px) {
     .sectors-grid { grid-template-columns: repeat(2, 1fr); }
@@ -949,121 +949,152 @@
   }
 
   .sector-card {
-    background: white;
-    border: 1px solid var(--line);
-    border-radius: 22px;
-    padding: 28px 20px 32px;
+    background: linear-gradient(180deg, #FFFFFF 0%, #FAFBFD 100%);
+    border: 1px solid rgba(15, 23, 42, 0.05);
+    border-radius: 32px;
+    padding: 36px 16px 32px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    transition: transform 0.35s cubic-bezier(0.16,1,0.3,1), box-shadow 0.35s, border-color 0.35s;
+    box-shadow:
+      0 1px 0 rgba(255,255,255,1) inset,
+      0 6px 12px -3px rgba(15, 23, 42, 0.04),
+      0 18px 40px -10px rgba(15, 23, 42, 0.08);
+    transition: transform 0.4s cubic-bezier(0.16,1,0.3,1), box-shadow 0.4s;
     position: relative;
   }
   .sector-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 24px 50px -12px rgba(10,11,20,0.1);
-    border-color: var(--sector-c, var(--kiggu-blue));
+    transform: translateY(-6px);
+    box-shadow:
+      0 1px 0 rgba(255,255,255,1) inset,
+      0 8px 18px -4px rgba(15, 23, 42, 0.06),
+      0 32px 60px -12px rgba(79, 96, 255, 0.18);
   }
 
   .sector-icon {
-    width: 110px;
-    height: 110px;
+    width: 130px;
+    height: 130px;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     color: white;
+    font-family: 'Inter', system-ui, sans-serif;
     font-weight: 700;
-    font-size: 15px;
+    font-size: 17px;
     text-align: center;
     line-height: 1.15;
-    margin-bottom: 28px;
-    padding: 0 10px;
-    box-shadow: 0 12px 26px -8px var(--sector-c-shadow, rgba(45,212,191,0.5));
-    background: linear-gradient(135deg, var(--sector-c-1), var(--sector-c-2));
+    letter-spacing: -0.015em;
+    margin-bottom: 32px;
+    padding: 0 14px;
+    background: linear-gradient(150deg, var(--sector-c-1) 0%, var(--sector-c-2) 100%);
+    box-shadow:
+      0 1px 0 rgba(255,255,255,0.4) inset,
+      0 18px 32px -10px var(--sector-c-shadow, rgba(79,96,255,0.4));
+    position: relative;
+  }
+  .sector-icon::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+    background: radial-gradient(circle at 30% 25%, rgba(255,255,255,0.35) 0%, transparent 50%);
+    pointer-events: none;
   }
   .sector-card[data-sector="salud"] {
-    --sector-c: #14B8A6;
     --sector-c-1: #2DD4BF;
-    --sector-c-2: #0D9488;
-    --sector-c-shadow: rgba(20,184,166,0.45);
+    --sector-c-2: #0EA5A4;
+    --sector-c-shadow: rgba(20,184,166,0.42);
   }
   .sector-card[data-sector="consumo"] {
-    --sector-c: #0EA5E9;
     --sector-c-1: #38BDF8;
     --sector-c-2: #0284C7;
-    --sector-c-shadow: rgba(14,165,233,0.45);
+    --sector-c-shadow: rgba(14,165,233,0.42);
   }
   .sector-card[data-sector="financieros"] {
-    --sector-c: #06B6D4;
     --sector-c-1: #22D3EE;
-    --sector-c-2: #0891B2;
-    --sector-c-shadow: rgba(6,182,212,0.45);
+    --sector-c-2: #0EA5A4;
+    --sector-c-shadow: rgba(6,182,212,0.42);
   }
   .sector-card[data-sector="gobierno"] {
-    --sector-c: #4F60FF;
-    --sector-c-1: #6E7EFF;
-    --sector-c-2: #3A4AE8;
-    --sector-c-shadow: rgba(79,96,255,0.45);
+    --sector-c-1: #818CF8;
+    --sector-c-2: #6366F1;
+    --sector-c-shadow: rgba(99,102,241,0.42);
   }
   .sector-card[data-sector="retail"] {
-    --sector-c: #3B82F6;
     --sector-c-1: #60A5FA;
-    --sector-c-2: #2563EB;
-    --sector-c-shadow: rgba(59,130,246,0.45);
+    --sector-c-2: #3B82F6;
+    --sector-c-shadow: rgba(59,130,246,0.42);
   }
 
+  /* Logo cloud — flexible layout that lets logos breathe */
   .sector-clients {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 14px;
     width: 100%;
+    align-items: center;
+    justify-content: center;
+    align-content: flex-start;
+    flex: 1;
+    row-gap: 14px;
   }
   .client-logo {
-    background: var(--bg-tint);
-    border: 1px solid var(--line);
-    border-radius: 10px;
-    padding: 10px 8px;
+    flex: 1 1 calc(50% - 14px);
+    min-width: 88px;
+    max-width: 100%;
+    min-height: 56px;
     display: flex;
     align-items: center;
     justify-content: center;
-    min-height: 48px;
-    transition: border-color 0.25s, transform 0.25s, background 0.25s;
+    padding: 8px 6px;
+    background: transparent;
+    border: none;
+    border-radius: 14px;
+    transition: background 0.25s, transform 0.25s;
     position: relative;
-    overflow: hidden;
+  }
+  .client-logo.full-row {
+    flex-basis: 100%;
   }
   .client-logo:hover {
-    border-color: var(--sector-c, var(--kiggu-blue));
-    transform: scale(1.04);
-    background: white;
+    background: rgba(79, 96, 255, 0.04);
+    transform: scale(1.06);
   }
   .client-logo img {
     max-width: 100%;
-    max-height: 32px;
+    max-height: 46px;
     width: auto;
     height: auto;
     object-fit: contain;
     display: block;
+    transition: filter 0.3s, transform 0.3s;
   }
   .client-logo .client-fallback {
     display: none;
     font-family: 'Inter', system-ui, sans-serif;
-    font-size: 11px;
-    font-weight: 700;
+    font-size: 12px;
+    font-weight: 600;
     color: var(--ink-soft);
-    letter-spacing: -0.01em;
+    letter-spacing: -0.015em;
     text-align: center;
-    line-height: 1.15;
+    line-height: 1.25;
+    padding: 12px 10px;
+    width: 100%;
+    background: var(--bg-tint);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    min-height: 48px;
+    align-items: center;
+    justify-content: center;
   }
   /* Show fallback when image fails to load */
   .client-logo:has(img[style*="none"]) .client-fallback,
   .client-logo.no-logo .client-fallback {
     display: flex;
-    align-items: center;
-    justify-content: center;
   }
-  .client-logo.full-row {
-    grid-column: span 2;
+  .client-logo.no-logo:hover {
+    background: transparent;
   }
 
   .about-extra {
